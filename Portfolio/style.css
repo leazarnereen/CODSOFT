@@ -1,0 +1,250 @@
+/*Nav bar*/
+
+
+body{
+    background-color: #0f0f0f;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+
+}
+#Navbar{
+    background-color: #343a40;
+    overflow:hidden;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+}
+.innerNav a {
+    float:left;
+    color:white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .innerNav a:hover {
+    text-decoration: underline;
+    text-decoration-color:#eb22da ;
+  }
+  
+  /* Add a color to the active/current link */
+  .innerNav a:active {
+    background-color: #acbee2;
+    color: white;
+  }
+
+  /* Main*/
+  #Profile {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f0f0f;
+    height: 500px;
+    color: white;
+}
+
+
+.Profile-content {
+    text-align: center;
+}
+
+#Qualifications,#Projects,#Skills,#Interests,#Profile{
+    background-color: #0f0f0f;
+    display:flex;
+    height:500px;
+    align-items:center;
+    justify-content: space-between;
+    color: white;
+}
+.Skills-container{
+    border:1px solid #eb22da;
+    border-radius: 10px;
+    color: white;
+    font-size: 5vh;
+    width: 600px;
+}
+
+.degree,.Project,.interest{
+    flex:1 1 30%;
+    margin: 5px;
+    display: inline-block;
+    color:white;
+    border:1px solid #eb22da;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding:10px;
+    font-size: 20px;
+    height:75vh;
+    position: relative;
+}
+a{
+    color:White;
+    text-decoration:none;
+}
+a:hover{
+    color:#eb22da;
+}
+.Interests{
+    align-items: center;
+}
+.interest{
+    height:200px;
+}
+
+.certificate:hover {
+    transition: background-image 0.3s ease-in-out;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 250px; /* Adjust this height based on your design needs */
+    font-size: 0;
+}
+
+
+.certificate:hover:nth-of-type(1) {
+    background-image: url('Essay.jpeg');
+}
+
+.certificate:hover:nth-of-type(2) {
+    background-image: url('Debate.jpeg');
+}
+
+.certificate:hover:nth-of-type(3) {
+    background-image: url('UIUX.jpeg');
+}
+
+/* Blinking cursor */
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+#typed-text {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    animation: blink 0.75s step-end infinite;}
+
+ h2, h3{
+    font-family: Montserrat; 
+}
+/* Footer styles */
+.footer {
+    background-color: #343a40; /* Dark background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Container for padding */
+.container {
+    padding: 10px 0; /* Vertical padding */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block; /* Display buttons inline */
+    border: 2px solid #ffffff; /* White border */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Padding inside buttons */
+    margin: 5px; /* Margin between buttons */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 30%; /* Circular buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #343a40; /* Dark text on hover */
+}
+
+/* Font Awesome icons */
+.fab {
+    margin-right: 8px; /* Space between icon and text */
+}
+@media (max-width: 768px) {
+    .innerNav a {
+        font-size: 14px;
+        padding: 10px 12px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #Qualifications, #Projects, #Skills, #Interests, #Profile {
+        padding: 10px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    .Skills-container {
+        font-size: 4vh;
+        width: 100%;
+    }
+    
+    .degree, .Project, .interest {
+        max-width: 100%;
+        margin: 10px 0;
+        max-height: 100%;
+        overflow: auto;
+        flex: 1 1 100%; /* Two items per row */
+        box-sizing: border-box;
+    }
+    
+    .certificate:hover {
+        height: 200px;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #typed-text {
+        font-size: 1.5em;
+    }
+     #Qualifications, #Projects, #Skills, #Interests, #Profile {
+        padding: 10px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .Skills-container {
+        font-size: 3vh;
+        width: 100%;
+    }
+    
+    .degree, .Project, .interest {
+        flex: 1 1 100%;
+        font-size: 16px;
+        /* max-width: 300%;
+        max-height: 30%; */
+        height:auto;
+        overflow: auto;
+        /* flex: 1 1 48%; Two items per row */
+        box-sizing: border-box;
+        margin: 10px 0;
+    }
+    
+    .btn {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+    
+    .innerNav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}

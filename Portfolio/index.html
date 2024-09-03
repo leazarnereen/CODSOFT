@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+   <!-- FontAwesome 6.2.0 CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <div id="Navbar">
+                <div class="innerNav">
+                    <a href="#Profile" class="active">Profile</a>
+                    <a href="#Qualifications" class="active">Qualifications</a>
+                    <a href="#Skills" class="active">Skills</a>
+                    <a href="#Projects" class="active">Projects</a>
+                    <a href="#Interests" class="active">Interests</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="Profile">
+                <div class="Profile-content" id=>
+                    <h1 id="typed-text"></h1>
+                </div>
+            </div>
+            <div id="Qualifications">
+                <div class="degree">
+                    <h2>St.Anthony's High School</h2>
+                    <h4> Telangana State Board Of Secondary Education</h4>
+                    <h4>2020</h4>
+                    <h3>CGPA:<i>10.0</i></h3>
+                </div>
+                <div class="degree">
+                    <h2>St.Anthony's Junior college</h2>
+                    <h4>Telangana State Board Of Intermediate Eduaction</h4>
+                    <h4>2020-2022</h4>
+                    <h3>CGPA:<i>9.78</i></h3>
+                </div>
+                <div class="degree">
+                    <h2>Keshav Memorial Institute of Technology</h2>
+                    <h4>Jawaharlal Nehru Technological University Hyderabad</h4>
+                    <h4>2022-2026 ongoing</h4>
+                    <h3>CGPA:<i>8.8</i></h3>
+                </div>
+            </div>
+            <div id="Skills">
+                <div class="Skills-container">
+                    <h4>My Skills:-</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Git</li>
+                        <li>MySQL</li>
+                        <li>C++, Java,Python</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Projects">
+                <div class="Project">
+                    <h3><a href="https://github.com/sreedharjinka/BlockchainEMSG120" target="_blank">Evidence Management System</a></h3>
+                    <h3>Group Project</h3>
+                    <h4>Technologies:- </h4>
+                    <ul>
+                        <li>BlockChain</li>
+                        <li>MongoDB</li>
+                        <li>Express Js</li>
+                        <li>React Js</li>
+                        <li>Node Js</li>
+                    </ul>
+                    
+                </div>
+                <div class="Project">
+                    <h3><a href="https://github.com/leazarnereen/Tic_Tac_Toe" target="_blank">Tic Tac Toe</a></h3>
+                    <h3>Individual Project</h3>
+                    <h4>Technologies:- </h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="Project">
+                    <h3><a href="https://github.com/leazarnereen/Rock_Paper_scissor" target="_blank">Rock-Paper-Scissor  Game</a></h3>
+                    <h3>Individual Project</h3>
+                    <h4>Technologies:- </h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Interests">
+                    <div class="interest certificate">
+                        Essay Writing<br>
+                        <ul>
+                        <li>Achieved 1st Prize on Topic <i>'Need of healthy food'</i></li>
+                        <li>Achieved Certificate for Topic <i>'Education'</i></li>
+                        </ul>
+                    </div>
+                <div class="interest certificate">
+                    Debate<br>
+                    <ul>
+                    <li>Achieved Certificate for Topic <i>'Is Educational Reforms needed in India?'</i></li>
+                    </ul>
+                </div>
+                <div class="interest certificate">
+                    web Design
+                    <br>
+                    <ul>
+                    <li>Achieved 3rd Prize for <i>'UX WIZ competition'</i> By TMI group</li>
+                    </ul>
+                </div>
+                <div class="interest">
+                    <div class="hobbies">
+                        Hobbies:-
+                        <ul>
+                            <li>Painting</li>
+                            <li>Zentangle Art</li>
+                            <li>Reading Books</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>© Aiman Zareen</p>
+            <div class="container">
+                <a class="btn" href="https://www.linkedin.com/in/aiman-zareen-1b1b022a4/" role="button" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a class="btn" href="https://github.com/leazarnereen" role="button" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </footer>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior:'smooth'
+                    })
+                })
+            })
+            document.addEventListener("DOMContentLoaded", function () {
+            const text = `Hello, I am Aiman Zareen. I am currently in the 3rd year of B.Tech.`;
+            let index = 0;
+            const speed = 100; // Typing speed in milliseconds
+            const typedText = document.getElementById("typed-text");
+
+            function typeWriter() {
+            if (index < text.length) {
+                typedText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+    }
+
+    typeWriter();
+});
+
+        </script>
+        
+</body>
+</html>
