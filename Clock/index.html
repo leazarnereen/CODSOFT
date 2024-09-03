@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="clock-container">
+            <div id="container">             
+                <div id="clock"></div>
+                <div id="part"></div>
+            </div>
+        </div>
+    </main>
+   
+    <script> 
+        
+        function updateTime() {
+            const now = new Date;
+            let sky="";
+            let part="";
+            var hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            if(hours==0){
+                hours=24;
+            }
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            if(hours>=21 || hours<5){
+                // sky="url('night.jpg')";
+                part="Night";
+            }else if (hours>=5 && hours<12){
+                // sky= hours<7?"url('Dawn.jpg')":"url('Morning.png')";
+                part= hours<7?"Dawn":"Morning";
+            }
+            else if (hours>=12 && hours<21){
+                // sky=hours<17?"url('Afternoon.png')":"url('Evening.png')";
+                part=hours<17?"Afternoon":"Evening";
+            }
+            sky=`url('${part}.png')`;
+            document.getElementById('clock').textContent = timeString;
+            document.getElementById('part').innerText= part;
+            const val=document.getElementById('clock-container').style.backgroundImage=sky;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately
+        updateTime();
+    </script>
+</body>
+</html>
+
