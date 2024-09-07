@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="icon" type="image/svg" href="to-do-list.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="item1">
+                <form id="taskFilterForm">
+                    <select name="list" id="taskFilter">
+                        <option value="all">All Tasks</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </form>
+            </div>
+            <div class="item2">
+                <img src="bell.ico" class="image" id="headerBell" alt="Reminder Bell">
+                <img src="calendar.ico" class="image" alt="Calendar">
+            </div>
+        </header>
+
+        <main>
+            <ul id="todo-list" class="todo-list">
+                <!-- Tasks will be added here -->
+            </ul>
+        </main>
+
+        <footer>
+            <div class="add-task">
+                <img src="add.ico" id="add-icon" class="add-icon" alt="Add Task">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
