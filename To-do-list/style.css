@@ -1,0 +1,111 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #5e3e6d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    background-color: #64765e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+    text-overflow: unset;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0e68c;
+}
+
+.dropdown {
+    flex: 1;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Main content styling */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    display:flex;
+    justify-content:space-between;
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.leftDiv {
+    display: flex;
+    align-items: center;
+    /* To leave space between the checkbox and task name */
+    gap: 10px;
+}
+
+.rightDiv {
+    display: flex;
+    align-items: center;
+    /* To add space between the icons */
+    gap: 15px;
+}
+
+.icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+/* Optional styling to adjust the overall width of the list items */
+.task-content {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0e68c;
+}
